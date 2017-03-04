@@ -6,7 +6,9 @@ For a specific algorithm:
 
 run ```rake benchmark:#{name}```
 
-<ul>Completed Algorithms
+# Completed Algorithms
+
+<ul>
   <li>bubble</li>
   <li>insertion</li>
   <li>selection</li>
