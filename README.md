@@ -4,8 +4,12 @@ run ```rake benchmark:all```
 
 For a specific algorithm:
 
-run ```rake benchmark:bubble```
-run ```rake benchmark:insertion```
-run ```rake benchmark:merge```
+run ```rake benchmark:#{name}```
 
-
+<ul>Completed Algorithms
+  <li>bubble</li>
+  <li>insertion</li>
+  <li>selection</li>
+  <li>merge</li>
+  <li>radixlsd</li>
+</ul>
