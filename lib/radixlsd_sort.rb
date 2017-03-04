@@ -4,7 +4,6 @@ require 'colorize'
 puts "Radix - Least Significant Digit Sort\n".bold
 
 puts Benchmark.measure {
-
   array = []
   10000.times { array << rand(10000) }
 
