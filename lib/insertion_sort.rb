@@ -1,12 +1,14 @@
 require 'benchmark'
 require 'colorize'
 
+limit = ARGV[0].to_i
+
 puts "Insertion Sort Algorithm\n".bold
 
 puts Benchmark.measure {
 
   array = []
-  10000.times { array << rand(10000) }
+  limit.times { array << rand(limit) }
 
   l = array.length
   (0...l-1).each do |i|

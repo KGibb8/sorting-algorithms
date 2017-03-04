@@ -1,10 +1,12 @@
 require 'benchmark'
 require 'colorize'
 
+limit = ARGV[0].to_i
+
 puts "Ruby Sort Algorithm\n".bold
 puts Benchmark.measure {
   array = []
-  10000.times { array << rand(1000) }
+  limit.times { array << rand(limit) }
 
   array.sort!
 }

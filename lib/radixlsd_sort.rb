@@ -1,12 +1,15 @@
 require 'benchmark'
 require 'colorize'
 
-puts "Radix - Least Significant Digit Sort\n".bold
+limit = ARGV[0].to_i
+
+puts "Radix LSD (Least Significant Digit) Sort Algorithm\n".bold
 
 puts Benchmark.measure {
   array = []
-  10000.times { array << rand(10000) }
+  limit.times { array << rand(limit) }
 
+  max = array.max
   mod = 10
   n = 1
   loop do
@@ -17,7 +20,7 @@ puts Benchmark.measure {
     end
 
     array = buckets.values.flatten
-    break if array.max / mod <= 1
+    break if max / mod <= 1
     mod *= 10
     n *= 10
   end

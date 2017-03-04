@@ -1,6 +1,8 @@
 require 'colorize'
 require 'benchmark'
 
+limit = ARGV[0].to_i
+
 puts "Merge Sort Algorithm\n".bold
 
 def sort_two(left, right)
@@ -41,6 +43,6 @@ puts "Each returned array is then recompared with the next \"batch\"\n"
 
 puts Benchmark.measure {
   array = []
-  10000.times{ array << rand(10000) }
+  limit.times{ array << rand(limit) }
   recursive_split(array)
 }
