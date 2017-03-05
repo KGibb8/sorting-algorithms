@@ -25,7 +25,7 @@ puts Benchmark.measure {
   limit.times { array << rand(limit) }
 
   max = array.max
-  divisor = 10 ** ((max.to_s.split('').count) - 1)
+  divisor = 10 ** ((max.to_s.size) - 1)
   recurse_sort(array, divisor)
 }
 
