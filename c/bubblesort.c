@@ -6,8 +6,10 @@
 int* getRandom(int limit) {
   /* Allocates memory to enable return of array outside of function */
   int *random = malloc(limit);
+  /* checking for NULL pointer */
   if (!random) {
-    return NULL;
+    fprintf(stderr, "out of memory\n");
+    exit(EXIT_FAILURE);
   }
   for (int i = 0; i < limit; i++ ) {
     random[i] = (rand() % limit);
@@ -45,6 +47,7 @@ int main() {
   int *array = getRandom(limit);
 
   if (array) {
+
     bool sorted = false;
     while (!sorted) {
       sorted = true;
@@ -63,6 +66,8 @@ int main() {
     }
 
     printf("\nExiting the program...\n");
+
+    free(array);
   }
 
   return 0;
