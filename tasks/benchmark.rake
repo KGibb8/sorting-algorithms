@@ -8,10 +8,9 @@ namespace :benchmark do
     sym = file.scan(/^.*\/(.*)_.*$/).first.first.to_sym
     all << sym
     task sym do
-      limit = ARGV.last || 10000
-      puts file
+      # limit = ARGV.last || 10000
       trap('SIGINT') { exit }
-      Kernel.exec "ruby #{file} #{limit.to_i}"
+      Kernel.exec "ruby #{file} 10000"
       puts ''
     end
 

@@ -14,4 +14,6 @@ run ```rake benchmark:#{name}```
   <li>selection</li>
   <li>merge</li>
   <li>radixlsd</li>
+  <li>radixmsd</li>
+  <li>quicksort</li>
 </ul>

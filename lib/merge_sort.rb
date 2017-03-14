@@ -39,10 +39,12 @@ end
 puts 'Uses recursion to split the array in half until left with only one item'
 puts 'For each leaf node, the numbers are sorted by comparing one at at time between each array'
 puts 'The smaller value is shovelled into the returned results, the index incremented and then checked again'
-puts "Each returned array is then recompared with the next \"batch\"\n"
+puts "Each returned array is then recompared with the next \"batch\"\n\n"
 
-puts Benchmark.measure {
+Benchmark.bm do |bm|
   array = []
   limit.times{ array << rand(limit) }
-  recursive_split(array)
-}
+  bm.report(:merge) do
+    recursive_split(array)
+  end
+end

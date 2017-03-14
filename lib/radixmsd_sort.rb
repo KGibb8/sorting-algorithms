@@ -20,12 +20,12 @@ def recurse_sort(array, divisor)
   results.flatten
 end
 
-puts Benchmark.measure {
+Benchmark.bm do |bm|
   array = []
   limit.times { array << rand(limit) }
-
-  max = array.max
-  divisor = 10 ** ((max.to_s.size) - 1)
-  recurse_sort(array, divisor)
-}
-
+  bm.report(:radixmsd) do
+    max = array.max
+    divisor = 10 ** ((max.to_s.size) - 1)
+    recurse_sort(array, divisor)
+  end
+end
