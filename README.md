@@ -1,5 +1,7 @@
 # Sorting Algorithms!
 
+[![SORTING-ALGORITHMS](https://img.youtube.com/vi/kPRA0W1kECg/0.jpg)](https://www.youtube.com/watch?v=kPRA0W1kECg)
+
 run ```rake benchmark:all```
 
 For a specific algorithm:
